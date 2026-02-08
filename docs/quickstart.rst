@@ -8,13 +8,13 @@ To build a wheel for your project::
 
 The wheel will go to ``dist/yourproject-<tags>.whl``.
 
-If you want to make universal (Python 2/3 compatible, pure Python) wheels, add the following
+If you want to make universal (pure Python) wheels, add the following
 section to your ``setup.cfg``::
 
     [bdist_wheel]
     universal = 1
 
-To convert an ``.egg`` or file to a wheel::
+To convert an ``.egg`` file or directory to a wheel::
 
     wheel convert youreggfile.egg
 
