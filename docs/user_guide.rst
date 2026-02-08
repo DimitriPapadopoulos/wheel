@@ -12,8 +12,8 @@ To build a wheel for your project::
 This will build any C extensions in the project and then package those and the
 pure Python code into a ``.whl`` file in the ``dist`` directory.
 
-If your project contains no C extensions and is expected to work on multiple
-Python versions, you will want to tell wheel to produce universal wheels by
+If your project contains no C extensions and is expected to work on both
+Python 2 and 3, you will want to tell wheel to produce universal wheels by
 adding this to your ``setup.cfg`` file:
 
 .. code-block:: ini
@@ -38,7 +38,7 @@ directory:
 This can be overridden by setting the ``license_files`` option in the
 ``[metadata]`` section of the project's ``setup.cfg``. For example:
 
-.. code-block:: ini
+.. code-block:: cfg
 
    [metadata]
    license_files =

@@ -9,11 +9,13 @@ Dev IRC: #pypa-dev
 This library is the reference implementation of the Python wheel packaging
 standard, as defined in `PEP 427`_.
 
-As of setuptools v70.1, the ``bdist_wheel`` command is built into setuptools and
-no longer requires wheel to be installed. This library now primarily serves as
-a command line tool for working with wheel files.
+It has two different roles:
 
-.. _PEP 427: https://peps.python.org/pep-0427/
+#. A setuptools_ extension for building wheels that provides the
+   ``bdist_wheel`` setuptools command
+#. A command line tool for working with wheel files
+
+.. _PEP 427: https://www.python.org/dev/peps/pep-0427/
 .. _setuptools: https://pypi.org/project/setuptools/
 
 .. toctree::
