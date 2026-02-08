@@ -29,12 +29,12 @@ Options
 
 .. option:: --python-tag=TAG
 
-    Override the python tag (prepend with "+" to append, "-" to remove).
+    Override the Python tag (prepend with "+" to append, "-" to remove).
     Multiple tags can be separated with a dot.
 
 .. option:: --abi-tag=TAG
 
-    Override the abi tag (prepend with "+" to append, "-" to remove).
+    Override the ABI tag (prepend with "+" to append, "-" to remove).
     Multiple tags can be separated with a dot.
 
 .. option:: --platform-tag=TAG
