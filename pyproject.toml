@@ -42,6 +42,7 @@ wheel = "wheel._commands:main"
 bdist_wheel = "wheel.bdist_wheel:bdist_wheel"
 
 [dependency-groups]
+lint = ["pre-commit"]
 test = [
     "packaging >= 26.0",
     "pytest >= 6.0.0",
@@ -121,6 +122,7 @@ mypy-init-return = true
 
 [tool.tox]
 env_list = ["py39", "py310", "py311", "py312", "py313", "py314", "pypy3", "lint", "pkg"]
+requires = ["tox>=4"]
 skip_missing_interpreters = true
 
 [tool.tox.env_run_base]
@@ -131,11 +133,9 @@ dependency_groups = ["test"]
 set_env = { PYTHONWARNDEFAULTENCODING = "1" }
 
 [tool.tox.env.lint]
-depends = []
-deps = ["pre-commit"]
+dependency_groups = "lint"
 package = "skip"
 commands = [["pre-commit", "run", "-a"]]
 
 [tool.tox.env.pkg]
-deps = ["build", "flit >= 3.8"]
 commands = [["pytest", "tests/test_sdist.py", { replace = "posargs", extend = true }]]
